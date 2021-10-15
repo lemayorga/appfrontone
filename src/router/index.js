@@ -2,6 +2,7 @@
 import {Route, Link,Switch, BrowserRouter as Router} from 'react-router-dom';
 import {Card, Row, Col} from 'antd';
 import App from "../App";
+import Home from '../pages/Home';
 
 export const NoMatchPage = () => {
     return (
@@ -24,7 +25,7 @@ export const NoMatchPage = () => {
   const routing = (
     <Router>
       <Switch>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Home} />
         {/* <Route exact path="/" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/dashboard" component={Dashboard} />
