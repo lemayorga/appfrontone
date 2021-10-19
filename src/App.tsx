@@ -1,9 +1,11 @@
 
-import 'antd/dist/antd.css';import '../src/styles/global.scss';
+import 'antd/dist/antd.css';import { randomFillSync } from 'crypto';
+import { rawListeners } from 'process';
+import '../src/styles/global.scss';
 import './App.css';
 import Layouts from './components/layout/Layouts';
 
- function App() {
+ function App(): JSX.Element {
   return (
     <Layouts>
     <div className="App">
@@ -14,3 +16,4 @@ import Layouts from './components/layout/Layouts';
 }
 
  export default App;
+

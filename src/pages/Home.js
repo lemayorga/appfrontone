@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col, Card} from 'antd';
 import Layouts from "../components/layout/Layouts";
+
 const Home = () => {
   return (
     <Layouts title="assets" classname="grid">
