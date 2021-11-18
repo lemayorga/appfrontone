@@ -1,42 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import {ItemMenuComplexProps, menuItems} from '../../types/menu/ItemMenuProp';
 import IconSelector from "./IconSelector";
 
+type MenuLayoutProps = {
+  collapsed:boolean;
+  onToggle:  React.MouseEventHandler<HTMLButtonElement>;
+}
 
-
-const MenuLayout = () => {
+const MenuLayout:React.FC<MenuLayoutProps> = (props: MenuLayoutProps) => {
 
     const { SubMenu }  = Menu;
     const active: string[] = [];
-    const [openKeys , setOpenKeys] = useState<Array<string>>([]);
-    const rootSubmenuKeys = ['sub1', 'sub2', 'sub4','sub5','sub3', 'sub6'];
+    const [openKeysState , setOpenKeys] = useState<Array<string>>([]);
+    // const rootSubmenuKeys =   ['1', '2', '4','5','3', '6','7'];
+    const [rootSubmenuKeys , setRootSubmenuKeys]  = useState<Array<string>>([]);
 
-    // const onOpenChange = (openKeys:React.Key[]) => {
-    //     const latestOpenKey  = openKeys.find(key => openKeys.indexOf(key) === -1);
-    //     if (rootSubmenuKeys.indexOf([latestOpenKey].toString()) === -1) {
-    //         setOpenKeys([...myMap.keys()] [openKeys.toString()]);
-    //     } else {
-    //         setOpenKeys([latestOpenKey.toString()] ? [latestOpenKey.] : []);
-    //     }
-    // };
+    useEffect(() => {
+      if(menuItems){
+        const menuItemsLista = menuItems.filter((x) => x.children).map((item) => item.key);
+        setRootSubmenuKeys(menuItemsLista);
+      }
+    }, [])
 
-    
-  //   const onOpenChange = (openKeys:React.Key[]) => {
+    const onOpenChange = (openKeys:React.Key[]) => {
 
-  //     const latestOpenKey  = openKeys.find(key => openKeys.indexOf(key) === -1);
+      const latestOpenKey  = openKeys.find(key => openKeysState.indexOf(key.toString()) === -1);
 
-
-  //     console.log(latestOpenKey)
-  //     console.log(openKeys)
-
-  //     if (rootSubmenuKeys.indexOf([latestOpenKey].toString()) === -1) {
-  //         setOpenKeys([openKeys.toString()]);
-  //     } else {
-  //         setOpenKeys(latestOpenKey != undefined ? [latestOpenKey.toString()] : []);
-  //     }
-  // };
+      if (rootSubmenuKeys.indexOf([latestOpenKey].toString()) === -1) {
+          setOpenKeys([openKeys.toString()]);
+      } else {
+          setOpenKeys(latestOpenKey != undefined ? [latestOpenKey.toString()] : []);
+      }
+  };
 
 
     const printItem = (child: ItemMenuComplexProps) =>  {
@@ -60,10 +57,8 @@ const MenuLayout = () => {
       );
   }
 
-
     return(
-        // <Menu theme="light" mode="vertical"  defaultSelectedKeys={active}   openKeys={openKeys}   onOpenChange={(e:React.Key[]) =>{onOpenChange(e)}   } > 
-        <Menu theme="light" mode="vertical"> 
+        <Menu theme="light" mode="vertical" defaultSelectedKeys={active}  openKeys={openKeysState} onOpenChange={(e:React.Key[]) =>{onOpenChange(e)}   } > 
           {menuItems.map((item, index) => {
             return (
                 item.children == null ?

@@ -1,4 +1,3 @@
-import React,{ useState } from "react";
 import logo from '../../static/images/logo.png';
 import avatar from '../../static/images/flat-avatar.png';
 import {Link} from 'react-router-dom';
@@ -10,11 +9,14 @@ import {
   MenuFoldOutlined
 } from '@ant-design/icons';
 
+interface HeaderDivProps {
+  collapsed: boolean;
+  onToggle:  React.MouseEventHandler<HTMLButtonElement>;
+}
 
-const HeaderDiv = (props) => {
+const HeaderDiv: React.FC<HeaderDivProps> =  ({collapsed, onToggle}) => {
 
   const SubMenu = Menu.SubMenu;
-  const {collapsed, onToggle} = props;
   const Component = collapsed ? MenuUnfoldOutlined : MenuFoldOutlined;
 
   return (
