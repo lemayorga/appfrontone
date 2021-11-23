@@ -1,7 +1,7 @@
 // import {Route, Link, Redirect,Switch, BrowserRouter as Router} from 'react-router-dom';
 import {Route, Link,Switch, BrowserRouter as Router} from 'react-router-dom';
 import {Card, Row, Col} from 'antd';
-import App from "../App";
+// import App from "../App";
 import Home from '../pages/Home';
 
 export const NoMatchPage = () => {

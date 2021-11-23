@@ -1,4 +1,4 @@
-import React,{ FunctionComponent, ReactChild, ReactChildren, ReactNode, useState } from "react";
+import React,{ useState } from "react";
 import { Layout } from 'antd';
 import { 
     MenuUnfoldOutlined,
@@ -16,7 +16,7 @@ type LayoutProps = {
  }
 
 const Layouts:React.FC<LayoutProps> = (props: LayoutProps) => {
-    const { children, title,classeName } = props;
+    const { children, classeName } = props;
     const { Header,Sider, Content , Footer} = Layout;
     const [collapsed, setCollapsed] =  useState(true);
 
