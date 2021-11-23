@@ -14,7 +14,6 @@ const MenuLayout:React.FC<MenuLayoutProps> = (props: MenuLayoutProps) => {
     const { SubMenu }  = Menu;
     const active: string[] = [];
     const [openKeysState , setOpenKeys] = useState<Array<string>>([]);
-    // const rootSubmenuKeys =   ['1', '2', '4','5','3', '6','7'];
     const [rootSubmenuKeys , setRootSubmenuKeys]  = useState<Array<string>>([]);
 
     useEffect(() => {
@@ -31,7 +30,7 @@ const MenuLayout:React.FC<MenuLayoutProps> = (props: MenuLayoutProps) => {
       if (rootSubmenuKeys.indexOf([latestOpenKey].toString()) === -1) {
           setOpenKeys([openKeys.toString()]);
       } else {
-          setOpenKeys(latestOpenKey != undefined ? [latestOpenKey.toString()] : []);
+          setOpenKeys(latestOpenKey !== undefined ? [latestOpenKey.toString()] : []);
       }
   };
 
