@@ -35,8 +35,7 @@ const onRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
 }
 
 const onRequestError = (error: AxiosError): Promise<AxiosError> => {
-  debugger;
-  console.error(`[request error] [${JSON.stringify(error)}]`);
+ //console.error(`[request error] [${JSON.stringify(error)}]`);
   return handleError(error);
 }
 
@@ -70,29 +69,6 @@ export const setupInterceptorsTo = (axiosInstance: AxiosInstance): AxiosInstance
     if(isAxiosError){
       return Promise.reject(error);
     }
-
-    // switch (response.status) {
-    //   case StatusCode.InternalServerError: {
-    //     // Handle InternalServerError
-    //     console.error('Handle InternalServerError');
-    //     break;
-    //   }
-    //   case StatusCode.Forbidden: {
-    //     // Handle Forbidden
-    //     console.error('Handle Forbidden');
-    //     break;
-    //   }
-    //   case StatusCode.Unauthorized: {
-    //     // Handle Unauthorized
-    //     console.error('Handle Unauthorized');
-    //     break;
-    //   }
-    //   case StatusCode.TooManyRequests: {
-    //     // Handle TooManyRequests
-    //     console.error('Handle TooManyRequests');
-    //     break;
-    //   }
-    // }
 
     return Promise.reject(error);
   }
