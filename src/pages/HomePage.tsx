@@ -1,35 +1,33 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import {Row, Col, Card} from 'antd';
-import Layouts from "../components/layout/Layouts";
-import *  as rolServies from '../services/apiServices/seguridad/roles.service';
-import Rol from '../types/modelsapis/seguridad/rol';
+// import *  as rolServies from '../services/apiServices/seguridad/roles.service';
+// import Rol from '../types/modelsapis/seguridad/rol';
 
 
-const Home: React.FC = () =>{
+const HomePage: React.FC = () =>{
 
-  const [roles, setRoles] = useState<Rol[]>([]);
-  useEffect(() => {
+  // const [roles, setRoles] = useState<Rol[]>([]);
+  // useEffect(() => {
 
-    const fetchData = async () => {
-      const listaRoles = await rolServies.get();
-     setRoles(listaRoles);
-      return listaRoles;
-    };
+  //   const fetchData = async () => {
+  //     const listaRoles = await rolServies.get();
+  //    setRoles(listaRoles);
+  //     return listaRoles;
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
-
-
-  console.log(roles);
   return (
-    <Layouts  title="assets" classeName="grid">
+    // <Layouts  title="assets" classeName="grid">
         <Contenido />
-    </Layouts>
+    // </Layouts>
   );
+
 };
 
-export default Home;
+export default HomePage;
+
 const Contenido: React.FC = () => {
   return(
     <Row gutter={16}>

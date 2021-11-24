@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
+import Constants from "../types/Constants";
  
 // enum StatusCode{
 //   Unauthorized = 401,
@@ -7,15 +8,15 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } f
 //   InternalServerError = 500,
 // }
 
-const urlBase: string = "https://localhost:5001/api";
+const urlBase:string = (process.env.REACT_APP_API_URL as string);
 
 
 // Podemos usar la siguiente función para inyectar el token JWT a través de un interceptor
 // Obtenemos el `accessToken` del localStorage que configuramos cuando nos autenticamos
 const injectToken = (config: AxiosRequestConfig): AxiosRequestConfig => {
   try {
-    const token = localStorage.getItem("accessToken");
-
+    const token = localStorage.getItem(Constants.ACCESS_TOKEN);
+    console.log(urlBase);
     if (token != null) {
       config.headers =  { 'Authorization': `Bearer ${token}`};
     }
@@ -45,7 +46,6 @@ const onResponse = (response: AxiosResponse): AxiosResponse => {
 }
 
 const onResponseError = (error: AxiosError): Promise<AxiosError> => {
-  debugger;
   console.error(`[response error] [${JSON.stringify(error)}]`);
   return handleError(error);
 }
