@@ -1,3 +1,4 @@
+import React from 'react';
 import {Route,Switch, BrowserRouter as Router, Link} from 'react-router-dom';
 import { Card, Col, Row } from 'antd';
 import AuthRoute, { PropsRoute } from './AuthRoute';
@@ -57,6 +58,7 @@ const NoMatchPage : React.FC = (): JSX.Element =>{
     </Row>
   );
 }
+
 
 
 

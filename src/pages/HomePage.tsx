@@ -1,22 +1,22 @@
-// import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Row, Col, Card} from 'antd';
-// import *  as rolServies from '../services/apiServices/seguridad/roles.service';
-// import Rol from '../types/modelsapis/seguridad/rol';
+import *  as rolServies from '../services/apiServices/seguridad/roles.service';
+import Rol from '../types/modelsapis/seguridad/rol';
 
 
 const HomePage: React.FC = () =>{
 
-  // const [roles, setRoles] = useState<Rol[]>([]);
-  // useEffect(() => {
+  const [roles, setRoles] = useState<Rol[]>([]);
+  useEffect(() => {
 
-  //   const fetchData = async () => {
-  //     const listaRoles = await rolServies.get();
-  //    setRoles(listaRoles);
-  //     return listaRoles;
-  //   };
+    const fetchData = async () => {
+      const listaRoles = await rolServies.get();
+     setRoles(listaRoles);
+      return listaRoles;
+    };
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
   return (
     // <Layouts  title="assets" classeName="grid">

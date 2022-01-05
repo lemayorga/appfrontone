@@ -1,3 +1,4 @@
+import React from 'react';
 import { Redirect, Route, RouteComponentProps } from "react-router";
 // import Constants from "../types/Constants";
 
