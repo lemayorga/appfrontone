@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from '../../static/images/logo.png';
 import avatar from '../../static/images/flat-avatar.png';
 import {Link} from 'react-router-dom';
