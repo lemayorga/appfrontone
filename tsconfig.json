@@ -19,7 +19,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react", // react-jsx
-    "baseUrl": "./" ,
+    "baseUrl": "src" ,
     // "outDir": "./dist/",
     "sourceMap": true,
 },

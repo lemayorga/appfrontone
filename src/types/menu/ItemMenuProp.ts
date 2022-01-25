@@ -21,9 +21,9 @@ export const menuItems:ItemMenuComplexProps[]  = [
 
     { key: "1", title:"Dashboard",link: "/dashboard", icon: "DashboardOutlined" },
     { 
-        key: "2", title:"Layout", icon: "LayoutOutlined", children:
+        key: "2", title:"Seguridad", icon: "LayoutOutlined", children:
         [
-            { key: "2.1", title:"Grid",link: "/layout/grid"  },
+            { key: "2.1", title:"Roles",link: "/seguridad/roles"  },
             { key: "2.2", title:"Layout",link: "/layout/gridLayout"  }
         ] 
      },

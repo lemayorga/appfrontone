@@ -59,7 +59,8 @@ module.exports = function(_env, argv) {
       open: true,
       historyApiFallback: true,
       compress: isProduction,
-      host: '192.168.0.5',
+      //host: '192.168.0.5',
+      host: '0.0.0.0',
     },
     module: {
       rules: [
