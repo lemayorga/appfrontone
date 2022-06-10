@@ -3,7 +3,7 @@ import Highlighter from 'react-highlight-words';
 import { DeleteOutlined, EditOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button, Input, Popconfirm, Space, Table } from 'antd';
 import { ColumnType, TableProps } from 'antd/lib/table';
-
+import  Constants from '../../types/Constants';
  
 
   function CustomTable<RecordType extends object = any>(props: TableProps<RecordType>){
@@ -33,7 +33,7 @@ import { ColumnType, TableProps } from 'antd/lib/table';
       <div style={{ padding: 8 }}>
         <Input
           ref={ searchInput }
-          placeholder={`Search ${dataIndex}`}
+          placeholder={`${Constants.TEXT_SEARCH} ${dataIndex}`}
           onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
           onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
           style={{ marginBottom: 8, display: 'block' }}

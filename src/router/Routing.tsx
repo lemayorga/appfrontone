@@ -2,7 +2,7 @@ import React from 'react';
 import {Route,Switch, BrowserRouter as Router, Link} from 'react-router-dom';
 import { Card, Col, Row } from 'antd';
 import AuthRoute, { PropsRoute } from './AuthRoute';
-import RolesPage from '../pages/seguridad/RolePage';
+import RolesPage from '../pages/seguridad/Roles/RolePage';
 import LoginPage from '../pages/auth/LoginPage';
 import SignupPage from '../pages/auth/SignupPage';
 import ForgotPasswordPage from '../pages/auth/ForgotPasswordPage';

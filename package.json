@@ -16,6 +16,7 @@
     "antd": "^4.16.13",
     "axios": "^0.23.0",
     "env-cmd": "^10.1.0",
+    "react-draggable": "^4.4.4",
     "react-highlight-words": "^0.17.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",

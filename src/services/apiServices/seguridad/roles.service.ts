@@ -9,6 +9,11 @@ export const get = async (): Promise<Rol[]> => {
   return data;
 };
 
+export const getByKey = async (key: string): Promise<Rol[]> => {
+  const { data } = await http.get<Rol[]>(`${url}/${key}`);
+  return data;
+};
+
 export const create = async (model: Rol): Promise<Rol> => {
   const { data } = await http.post<Rol>(url, model);
   return data;
@@ -19,8 +24,8 @@ export const update = async (model: Rol): Promise<Rol> => {
   return data;
 };
 
-export const remove = async (model: Rol): Promise<Rol> => {
-  const { data } = await http.delete<Rol>(`/users/${model.cod_rol}`);
+export const removeByKey = async (key: any | number): Promise<boolean> => {
+  const { data } = await http.delete<boolean>(`${url}/${key}`);
   return data;
 };
 
