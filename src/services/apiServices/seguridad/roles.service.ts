@@ -1,5 +1,5 @@
-import { http } from "../../../config/http-common";
-import  Rol  from '../../../types/modelsapis/seguridad/rol';
+import { http } from "@app/config/http-common";
+import  Rol  from '@app/types/modelsapis/seguridad/rol';
 
 
 const url: string = "/seguridad/Rol";

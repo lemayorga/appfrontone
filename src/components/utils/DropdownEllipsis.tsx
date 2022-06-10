@@ -1,6 +1,6 @@
 import { DeleteOutlined, EditOutlined, EllipsisOutlined, PicCenterOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Menu, Popconfirm } from "antd";
-import  Constants from '../../types/Constants';
+import  Constants from '@app/types/Constants';
 import React from "react";
 
 export type DropdownEllipsisProps = {

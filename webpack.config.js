@@ -48,6 +48,9 @@ module.exports = function(_env, argv) {
     devtool:(isDevelopment) ? 'source-map' : 'inline-source-map', 
     resolve: {
         extensions: ['.js','.jsx','.ts','.tsx','.css','.less','.scss','.sass','.json'],
+        alias: {
+          '@app': '/src',
+        },
     },
     performance: {
       hints:false ,
@@ -60,7 +63,7 @@ module.exports = function(_env, argv) {
       historyApiFallback: true,
       compress: isProduction,
       //host: '192.168.0.5',
-      host: '0.0.0.0',
+     // host: '0.0.0.0',
      // disableHostCheck: true,
     },
     module: {

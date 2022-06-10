@@ -2,13 +2,14 @@ import { Button, PageHeader, Result } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import RolForm from './RolForm';
-import CustomTable from "../../../components/utils/GridTable";
-import DropdownEllipsis from '../../../components/utils/DropdownEllipsis';
-import { ModalUseCustom, useModalWithData } from '../../../components/utils/ModalUseCustom';
-import Rol from "types/modelsapis/seguridad/rol";
-import * as rolServies from '../../../services/apiServices/seguridad/roles.service';
-import FormProp from 'types/customers/FormProp';
-import EumTransactionType from '../../../types/enums/EumTransactionType';
+import CustomTable from "@app/components/utils/GridTable";
+import DropdownEllipsis from '@app/components/utils/DropdownEllipsis';
+import { ModalUseCustom, useModalWithData } from '@app/components/utils/ModalUseCustom';
+import Rol from "@app/types/modelsapis/seguridad/rol";
+import * as rolServies from '@app/services/apiServices/seguridad/roles.service';
+import FormProp from '@app/types/customers/FormProp';
+import EumTransactionType from '@app/types/enums/EumTransactionType';
+
 
 const RolesPage: React.FC = () =>{
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
-import {ItemMenuComplexProps, menuItems} from '../../types/menu/ItemMenuProp';
+import {ItemMenuComplexProps, menuItems} from '@app/types/menu/ItemMenuProp';
 import IconSelector from "./IconSelector";
 
 type MenuLayoutProps = {

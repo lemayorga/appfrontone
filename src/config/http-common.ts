@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
-import Constants from "../types/Constants";
+import Constants from "@app/types/Constants";
  
 // enum StatusCode{
 //   Unauthorized = 401,

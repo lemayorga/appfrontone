@@ -3,7 +3,7 @@ import Highlighter from 'react-highlight-words';
 import { DeleteOutlined, EditOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button, Input, Popconfirm, Space, Table } from 'antd';
 import { ColumnType, TableProps } from 'antd/lib/table';
-import  Constants from '../../types/Constants';
+import  Constants from '@app/types/Constants';
  
 
   function CustomTable<RecordType extends object = any>(props: TableProps<RecordType>){
