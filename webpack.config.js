@@ -61,6 +61,7 @@ module.exports = function(_env, argv) {
       compress: isProduction,
       //host: '192.168.0.5',
       host: '0.0.0.0',
+     // disableHostCheck: true,
     },
     module: {
       rules: [
