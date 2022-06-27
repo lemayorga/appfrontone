@@ -18,15 +18,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react", // react-jsx
+    "jsx": "react-jsx", //"react", // react-jsx
     "baseUrl": "src" ,
     // "outDir": "./dist/",
     "sourceMap": true,
+    "paths": {
+      "@app/*": [
+        "*"
+      ]
+    },
 },
 "include": [
   "src/**/*",
   "./src",
   "./src/**/*",
+  "src"
 ],
 "exclude":  ["node_modules", "build"]
 }

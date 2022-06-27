@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Input, Button, Space } from 'antd';
-import FormProp  from 'types/customers/FormProp';
-import Rol from 'types/modelsapis/seguridad/rol';
-import Constants from '../../../types/Constants';
+import FormProp  from '@app/types/customers/FormProp';
+import Rol from '@app/types/modelsapis/seguridad/rol';
+import Constants from '@app/types/Constants';
 
 interface RolFormProps extends FormProp{
   record?:Rol

@@ -6,11 +6,14 @@ import 'antd/dist/antd.less';
 import '../src/styles/global.scss';
 //import './App.css';
 import Routing from './router/Routing';
+import { LanguageProvider } from './contexts/Language/LanguageProvider';
 
 
  function App(): JSX.Element {
   return (
-    <Routing /> 
+    <LanguageProvider>
+     <Routing /> 
+    </LanguageProvider>
   );
 }
 

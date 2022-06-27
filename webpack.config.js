@@ -48,6 +48,9 @@ module.exports = function(_env, argv) {
     devtool:(isDevelopment) ? 'source-map' : 'inline-source-map', 
     resolve: {
         extensions: ['.js','.jsx','.ts','.tsx','.css','.less','.scss','.sass','.json'],
+        alias: {
+          '@app': '/src',
+        },
     },
     performance: {
       hints:false ,
@@ -60,7 +63,7 @@ module.exports = function(_env, argv) {
       historyApiFallback: true,
       compress: isProduction,
       //host: '192.168.0.5',
-      host: '0.0.0.0',
+     // host: '0.0.0.0',
      // disableHostCheck: true,
     },
     module: {
@@ -103,13 +106,16 @@ module.exports = function(_env, argv) {
             },
           ],
         }, 
-        // {
-        //   loader: "ts-loader",
-        //   options: {
-        //       configFile: path.resolve(__dirname, './tsconfig.json'), 
-        //       compilerOptions: { noEmit: false },   
-        //   }
-        // }                
+        {
+          test: /\.json$/,
+          type: 'javascript/auto',
+          use: [{
+              loader: 'webpack-typings-for-json',
+              options: {
+                exportValues: true
+            }
+          }]
+        },               
       ],
     },
     plugins: [
@@ -132,6 +138,9 @@ module.exports = function(_env, argv) {
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(argv.mode)
       }),
+    //   new webpack.WatchIgnorePlugin([
+    //     /json\.d\.ts$/
+    //  ]),
     ].filter(Boolean),
     optimization: {
       minimize: isProduction,
