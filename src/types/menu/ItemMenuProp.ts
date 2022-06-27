@@ -1,3 +1,5 @@
+import { LabelTraslate } from "@app/contexts/Language/LanguageContext";
+
 export interface  ItemMenuProps {
     key:string;
     title:string;
@@ -13,8 +15,8 @@ export interface ItemMenuComplexProps{
     children?:ItemMenuProps[]; 
 }
 
-
 export default ItemMenuProps;
+
 
 
 export const menuItems:ItemMenuComplexProps[]  = [
@@ -23,7 +25,7 @@ export const menuItems:ItemMenuComplexProps[]  = [
     { 
         key: "2", title:"Seguridad", icon: "LayoutOutlined", children:
         [
-            { key: "2.1", title:"Roles",link: "/seguridad/roles"  },
+            { key: "2.1", title: "Roles",link: "/seguridad/roles"  },
             { key: "2.2", title:"Layout",link: "/layout/gridLayout"  }
         ] 
      },

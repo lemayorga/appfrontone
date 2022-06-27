@@ -106,13 +106,16 @@ module.exports = function(_env, argv) {
             },
           ],
         }, 
-        // {
-        //   loader: "ts-loader",
-        //   options: {
-        //       configFile: path.resolve(__dirname, './tsconfig.json'), 
-        //       compilerOptions: { noEmit: false },   
-        //   }
-        // }                
+        {
+          test: /\.json$/,
+          type: 'javascript/auto',
+          use: [{
+              loader: 'webpack-typings-for-json',
+              options: {
+                exportValues: true
+            }
+          }]
+        },               
       ],
     },
     plugins: [
@@ -135,6 +138,9 @@ module.exports = function(_env, argv) {
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(argv.mode)
       }),
+    //   new webpack.WatchIgnorePlugin([
+    //     /json\.d\.ts$/
+    //  ]),
     ].filter(Boolean),
     optimization: {
       minimize: isProduction,

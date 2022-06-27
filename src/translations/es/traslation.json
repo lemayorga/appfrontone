@@ -1,0 +1,17 @@
+{
+    "top_bar_title": "Comunidad Admin Panel",
+    "welcome": "Bienvenido",
+    "yes": "Si",
+    "no": "No",
+    "search": "Buscar",
+    "action": "Acción",
+    "required_field": "Campo requerido",
+    "remover_item_grid": "¿Esta seguro de eliminar el registro?",
+    "see_details_item_grid": "Ver detalle",
+    "Menu":{
+        "Seguridad":{
+            "roles": "roles",
+            "users": "usuarios"
+        }
+    }
+}

@@ -1,20 +1,24 @@
 import React from 'react';
 import {Row, Col, Card} from 'antd';
+import { LabelTraslate, TextTraslate } from '@app/contexts/Language/LanguageContext';
+
 const HomePage: React.FC = () =>{
   return (
-    // <Layouts  title="assets" classeName="grid">
-        <Contenido />
-    // </Layouts>
+    <>
+      <TextTraslate tid="welcome" />
+      <Contenido />
+    </>
   );
 
 };
 
 export default HomePage;
 
+
 const Contenido: React.FC = () => {
+
   return(
     <Row gutter={16}>
-
     <Col xs={24} md={14}>
       <Card
         bordered={false}
@@ -99,3 +103,6 @@ const Contenido: React.FC = () => {
   )
 }
 
+
+// PLugin de json
+// https://www.npmjs.com/package/webpack-typings-for-json

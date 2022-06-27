@@ -1,0 +1,17 @@
+{
+    "top_bar_title": "Community Admin Panel",
+    "welcome": "Welcome",
+    "yes": "yes",
+    "no": "No",
+    "search": "Search",
+    "action": "Acción",
+    "required_field": "Required field",
+    "remover_item_grid": "Are you sure you want to delete the record?",
+    "see_details_item_grid": "See details",
+    "Menu":{
+        "Seguridad":{
+            "roles": "roles",
+            "users": "users"
+        }
+    }
+}
