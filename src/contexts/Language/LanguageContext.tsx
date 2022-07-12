@@ -23,8 +23,7 @@ export const TextTraslate: React.FC<{ tid: string }> = ({ tid }: { tid: string }
 
 export const LabelTraslate = (tid: string) => {
   const languageContext = useContext(LanguageContext);
- // return languageContext.dictionary[tid] || tid;
-  debugger;
+
   if(!tid.includes('.')){
     return languageContext.dictionary[tid] || tid;
   }else {
