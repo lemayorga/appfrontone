@@ -16,5 +16,18 @@ const Constants = {
 }
 
 
+export const ConstantsActionType = {
+    LOAD: 'LOAD',
+    GET_DATA_ALL: 'GET_DATA_ALL',
+    GET_DATA_BY_KEY: 'GET_DATA_BY_KEY',
+    ADD: 'ADD',
+    UPDATE: 'UPDATE',
+    DELETE: 'DELETE',
+    SET_MODEL: 'SET_MODEL',
+    SET_MODEL_TO_FORM: 'SET_MODEL_TO_FORM',
+    SET_FORM_TO_MODEL: 'SET_FORM_TO_MODEL',
+    SET_TRANSACTION: 'SET_TRANSACTION',
+}
+
 
 export default Constants;
