@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Form, Input, Button, Space } from 'antd';
 import FormProp  from '@app/types/customers/FormProp';
 import Rol from '@app/types/modelsapis/seguridad/rol';
 import Constants from '@app/types/Constants';
+import { RolContext } from '@app/contexts/bussines/seguridad/RolContext';
 
 interface RolFormProps extends FormProp{
   record?:Rol
 }
 
 const RolForm = (props: RolFormProps) => {
-  const {textCancel, textOk , onCancel, onOk, record, disabled } =  props;
-  const [currentRol, setCurrentRol] = useState(record);
+  const {textCancel, textOk , onCancel, onOk, disabled } =  props;
   const [form] = Form.useForm();
+  const { state } = useContext(RolContext);
+  const { model } = state;
 
+  
   useEffect(() => {
-    setCurrentRol(record);
-    form.setFieldsValue(record);
-
-  }, [form, record])
+      form.setFieldsValue(model);
+  }, [form])
 
   const onFinish =  (values: Rol) => {
-    setCurrentRol(values);
     console.log('Success:', values);
     onOk && onOk(values);
   };
