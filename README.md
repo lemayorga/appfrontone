@@ -1,3 +1,5 @@
+![My Skills](https://skillicons.dev/icons?i=html,css,js,nodejs,react,&theme=light)
+
 ## Appfrontone
 
 Aplicación web hecha en react js , typescript y controles antd
