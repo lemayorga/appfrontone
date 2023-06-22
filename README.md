@@ -1,4 +1,4 @@
-![My Skills](https://skillicons.dev/icons?i=html,css,js,nodejs,react,&theme=light)
+![My Skills](https://skillicons.dev/icons?i=html,css,js,nodejs,react,webpack,ts,&theme=light)
 
 ## Appfrontone
 
